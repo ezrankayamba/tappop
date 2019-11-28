@@ -1,62 +1,22 @@
 <div id="wrap">
     <div id="main" class="clear-top">
-        <header class="app-bg-primary sticky-top">
-                <nav class="container text-light navbar navbar-dark navbar-expand-md">
-                    <a href="#" class="navbar-brand">
-                        Tap Pop
-                    </a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navMenu"
-                        aria-controls="navMenu"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                        id="menu-toggle-btn"
-                    >
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navMenu">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" hrep="/">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/login">
-                                    Login
-                                </a>
-                            </li>
-                        </ul>
+        {{> navbar }}
+        <div class="container">
+            <div class="row pt-2">
+            {{#each distributors}}
+                <div class="col-md mb-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Aged: {{age}}</h6>
+                        <p class="card-text">This distributor executed his duties for {{projects}} and managed to archieve a performance of {{performance}}%</p>
+                        <a data-id="{{id}}" role="button" href="#" class="btn btn-sm btn-outline-primary d-block btn-broadcast">Broadcast</a>
+                      </div>
                     </div>
-                </nav>
-            </header>
-            <div class="container">
-                <div class="row pt-2">
-                {{#each distributors}}
-                    <div class="col-md mb-2">
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">{{name}}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Aged: {{age}}</h6>
-                            <p class="card-text">This distributor executed his duties for {{projects}} and managed to archieve a performance of {{performance}}%</p>
-                            <a data-id="{{id}}" role="button" href="#" class="btn btn-sm btn-outline-primary d-block btn-broadcast">Broadcast</a>
-                          </div>
-                        </div>
-                    </div>
-                {{/each}}
                 </div>
+            {{/each}}
             </div>
-    </div>
-</div>
-<footer class="footer bg-dark text-secondary">
-    <div class="container">
-        <div class="row">
-            <div class="col-md text-center">About Us</div>
-            <div class="col-md text-center">Contact Us</div>
-            <div class="col-md text-center">Our Parneters</div>
         </div>
     </div>
-</footer>
+</div>
+{{> footer }}

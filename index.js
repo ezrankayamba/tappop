@@ -58,7 +58,8 @@ app.engine(
     "hbs",
     handlebars({
         layoutsDir: __dirname + "/views/layouts",
-        extname: "hbs"
+        extname: "hbs",
+        partialsDir: ["views/partials/"]
     })
 );
 
