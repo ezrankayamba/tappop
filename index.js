@@ -74,6 +74,6 @@ app.get("/admin", (req, res) => {
     res.render("admin", { layout: "index", distributors: list });
 });
 
-server.listen(port, () => {
+server.listen(port, "0.0.0.0", () => {
     console.log(`Listening to requests on http://localhost:${port}`);
 });
