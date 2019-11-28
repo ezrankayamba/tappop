@@ -1,4 +1,6 @@
-const url = "ws://localhost:8080";
+const host = window.location.host;
+const prot = window.location.protocol;
+const url = `${prot === "https" ? "wss" : "ws"}://${host}`;
 const connection = new WebSocket(url);
 (function() {
     let path = window.location.pathname;
