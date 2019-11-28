@@ -1,0 +1,52 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+#root {
+    min-height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 64px;
+    /* this needs to be bigger than footer height*/
+}
+
+.footer {
+    position: relative;
+    margin-top: -64px;
+    /* negative value of footer height */
+    min-height: 64px;
+    clear: both;
+    padding-top: 1rem;
+}
+
+.app-bg-dark {
+    background: #17252a;
+}
+
+.app-bg-primary {
+    background: #2b7a78;
+}
+
+.app-bg-secondary {
+    background: #3aafa9;
+}
+
+.app-bg-light {
+    background: #def2f1;
+}
+
+.app-bg-white {
+    background: #feffff;
+}
+
+.hide {
+    display: none;
+}
